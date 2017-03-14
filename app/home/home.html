@@ -3,8 +3,8 @@
 <div class="container">
 	<div class="row">
 		<div id="custom-search-input">
-            <div class="input-group col-md-12">
-                <input class="  search-query form-control" type="text" ng-model="searchartist" ng-change="searchArtist()" placeholder="Search for an artist">
+            <div class="input-group input-group-lg col-md-12">
+                <input class="search-query form-control" type="text" ng-model="searchartist" ng-change="searchArtist()" placeholder="Search for an ...">
                 <span class="input-group-btn">
                     <button class="btn btn-danger" type="button">
                         <span class=" glyphicon glyphicon-search"></span>
@@ -21,7 +21,7 @@
                         <input ng-value="{{searchtype}}" type="hidden" name="happy" id="happy">
                     </div>
             </div>
-
+            
         </div>
 	</div>
 </div>
@@ -30,7 +30,7 @@
 
 <div class="container">
     <div class="row">
-
+        <div ng-if="error" class="alert alert-danger" role="alert"> <strong>Oh snap!</strong> Change a few things up and try typing again. </div>
         <div class="col-sm-6 col-md-4 col-lg-3 mt-4" ng-repeat="artist in artists">
             <div class="card">
                 <a class="media" ng-href="{{artist.external_urls.spotify}}" target="_blank">

@@ -17,9 +17,12 @@ app.config(['$routeProvider', 'SpotifyProvider', function($routeProvider, Spotif
 app.controller('SpotifyCtrl', function($scope, Spotify){
 
     $scope.searchtype = 'artist';
+    $scope.error = false;
     $scope.searchArtist = function () {
       console.log('searchtype' + $scope.searchtype);
       Spotify.search($scope.searchartist, $scope.searchtype).then(function (data) {
+        $scope.error = false;
+        
         if($scope.searchtype == 'artist'){
           $scope.artists = data.artists.items;
         }
@@ -27,6 +30,9 @@ app.controller('SpotifyCtrl', function($scope, Spotify){
           $scope.artists = data.albums.items;
           console.log($scope.artists);
         }
+      }).catch(function(fallback) {
+        console.log('fallback -> '+fallback);
+        $scope.error = true;
       });
     };
 
@@ -38,7 +44,8 @@ app.controller('SpotifyCtrl', function($scope, Spotify){
         $scope.searchArtist();
         $('a[data-toggle="'+tog+'"]').not('[data-title="'+sel+'"]').removeClass('active').addClass('notActive');
         $('a[data-toggle="'+tog+'"][data-title="'+sel+'"]').removeClass('notActive').addClass('active');
-    })
+    });
+    
     
 });
 
