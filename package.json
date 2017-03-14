@@ -4,6 +4,9 @@
   "description": "A boilerplate that demonstrates the Node.js container",
   "main": "index.js",
   "scripts": {
+    "postinstall": "bower install",
+    "update-deps": "npm update",
+    "postupdate-deps": "bower update",
     "start": "node index.js"
   },
   "devDependencies": {
