@@ -1,9 +1,3 @@
-# Node.js / Boilerplate
-
-This template will help you through the process of deploying a Node.js container.
-
-> [Visit the documentation to learn how to start using the Node.js container.](http://wedeploy.com/docs/other/nodejs.html)
-
 # `angular-spotify` — the music search apps
 
 ### Install Dependencies
@@ -140,22 +134,6 @@ This will call `npm update` and `bower update`, which in turn will find and inst
 versions that match the version ranges specified in the `package.json` and `bower.json` files
 respectively.
 
-
-## Loading Angular Asynchronously
-
-The `angular-spotify` project supports loading the framework and application scripts asynchronously.
-The special `index-async.html` is designed to support this style of loading. For it to work you must
-inject a piece of Angular JavaScript into the HTML page. The project has a predefined script to help
-do this:
-
-```
-npm run update-index-async
-```
-
-This will copy the contents of the `angular-loader.js` library file into the `index-async.html`
-page. You can run this every time you update the version of Angular that you are using.
-
-
 ## Serving the Application Files
 
 While Angular is client-side-only technology and it is possible to create Angular web apps that
@@ -210,14 +188,12 @@ For more information on AngularJS please check out [angularjs.org][angularjs].
 [jdk]: https://wikipedia.org/wiki/Java_Development_Kit
 [jdk-download]: http://www.oracle.com/technetwork/java/javase/downloads
 [karma]: https://karma-runner.github.io/
-[local-app-url]: http://localhost:8000/index.html
+[local-app-url]: http://localhost:80/index.html
 [node]: https://nodejs.org/
 [npm]: https://www.npmjs.org/
 [protractor]: http://www.protractortest.org/
 [selenium]: http://docs.seleniumhq.org/
-[travis]: https://travis-ci.org/
-[travis-docs]: https://docs.travis-ci.com/user/getting-started
-
+[Node.js container]: http://wedeploy.com/docs/other/nodejs.html
 
 or 
 
