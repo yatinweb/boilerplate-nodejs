@@ -2,6 +2,7 @@
   "name": "boilerplate-nodejs",
   "version": "1.0.0",
   "description": "A boilerplate that demonstrates the Node.js container",
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "postinstall": "bower install",
@@ -10,7 +11,7 @@
     "postupdate-deps": "bower update",
 
     "prestart": "npm install",
-    "start": "http-server -a localhost -p 80 -c-1 ./app"
+    "start": "http-server -a music.wedeploy.io -p 80 -c-1 ./app"
   },
   "devDependencies": {
     "bower": "^1.7.7",
