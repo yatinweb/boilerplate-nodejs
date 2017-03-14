@@ -6,12 +6,10 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "bower install",
-
     "update-deps": "npm update",
     "postupdate-deps": "bower update",
-
     "prestart": "npm install",
-    "start": "http-server -a music.wedeploy.io -p 80 -c-1 ./app"
+    "start": "http-server -p 80 -c-1 ./app"
   },
   "devDependencies": {
     "bower": "^1.7.7",
