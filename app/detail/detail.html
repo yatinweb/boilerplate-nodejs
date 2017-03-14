@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">{{artists[0].artists[0].name}}</div>
+            <div class="panel-body">
+                <div class="col-sm-6 col-md-4 col-lg-3 mt-4" ng-repeat="artist in artists">
+                    <div class="card">
+                        <a class="media" ng-href="{{artist.external_urls.spotify}}" target="_blank">
+                            <img class="card-img-top" ng-src="{{artist.images[0].url || 'https://placeholdit.imgix.net/~text?txtsize=60&txt=No%20Image%20found&w=640&h=640'}}">
+                        </a>
+                            <div class="card-block">
+                                <h4 class="card-title">{{artist.name}}</h4>
+                                <div class="meta">
+                                    <i class="glyphicon glyphicon-heart" ng-if="artist.followers.total"></i> {{artist.followers.total}} 
+                                    <a ng-href="#!/detail/{{artist.id}}" class="label label-success" ng-repeat="artist in artist.artists">{{artist.name}}</a> 
+                                </div>
+                                <div class="card-text">
+                                    Yatin is a front end developer from india.
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="float-right">Popularity</span>
+                                <span><i class="glyphicon glyphicon-star"></i> {{artist.popularity}}</span>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
