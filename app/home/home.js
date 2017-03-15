@@ -24,13 +24,11 @@ app.controller('SpotifyCtrl', function($scope, Spotify){
         
         if($scope.searchtype == 'artist'){
           $scope.artists = data.artists.items;
-          console.log($scope.artists);
         }
         if($scope.searchtype == 'album'){
           $scope.artists = data.albums.items;
         }
       }).catch(function(fallback) {
-        console.log('fallback -> '+fallback);
         $scope.error = true;
       });
     };
