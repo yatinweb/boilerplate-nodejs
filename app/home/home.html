@@ -37,7 +37,7 @@
                     <img class="card-img-top" ng-src="{{artist.images[0].url || 'https://placeholdit.imgix.net/~text?txtsize=60&txt=No%20Image%20found&w=640&h=640'}}">
                 </a>
                     <div class="card-block">
-                        <h4 class="card-title">{{artist.name}}</h4>
+                        <h4 class="card-title"><a ng-href="#!/detail/{{artist.id}}">{{artist.name}}</a></h4>
                         <div class="meta">
                             <i class="glyphicon glyphicon-heart" ng-if="artist.followers.total"></i> {{artist.followers.total}} 
                             <a ng-href="#!/detail/{{artist.id}}" class="label label-success" ng-repeat="artist in artist.artists">{{artist.name}}</a> 

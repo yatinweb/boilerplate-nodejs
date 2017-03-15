@@ -19,16 +19,15 @@ app.controller('SpotifyCtrl', function($scope, Spotify){
     $scope.searchtype = 'artist';
     $scope.error = false;
     $scope.searchArtist = function () {
-      console.log('searchtype' + $scope.searchtype);
       Spotify.search($scope.searchartist, $scope.searchtype).then(function (data) {
         $scope.error = false;
         
         if($scope.searchtype == 'artist'){
           $scope.artists = data.artists.items;
+          console.log($scope.artists);
         }
         if($scope.searchtype == 'album'){
           $scope.artists = data.albums.items;
-          console.log($scope.artists);
         }
       }).catch(function(fallback) {
         console.log('fallback -> '+fallback);
